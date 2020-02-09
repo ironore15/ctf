@@ -40,7 +40,7 @@ def decrypt(nonce, cipher, tag, exploit=False):
     sendData('cipher', cipher)
     sendData('tag', tag)
 
-    auth = getData('auth') == "True"
+    auth = getData('auth') == 'True'
     plain = getData('plain') if auth and not exploit else None
     return auth, plain
 
